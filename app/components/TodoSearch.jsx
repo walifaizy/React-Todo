@@ -4,12 +4,12 @@ var TodoSearch = React.createClass({
     handleSearch: function() {
         var showCompleted = this.refs.showCompleted.checked;
         var searchText = this.refs.searchText.value;
-        
+
         this.props.onSearch(showCompleted, searchText);
     },
     render: function() {
         return (
-            <div>
+            <div className="container__header">
                 <div>
                     <input type="search" ref="searchText" onChange={this.handleSearch} placeholder="Sarch todos"/>
                 </div>
